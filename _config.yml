@@ -1,1 +1,14 @@
+remote_theme: nature/ArchLinux-Manual-Installation-Guide
+title: ArchLinux中文手动安装教程
+description: 适合中国宝宝体质的ArchLinux入门教程
 
+nav_sort: case_insensitive
+search_enabled: true
+search.heading_level: 2
+heading_anchors: true
+
+aux_links:
+  "GitHub 仓库": "https://github.com/你的用户名/my-tutorial"
+
+plugins:
+  - jekyll-remote-theme
