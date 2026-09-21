@@ -11,13 +11,13 @@ nav_order: 0
 
 ## 目录
 
-- [pc介绍部分](00-PC.md)
-- [01选择镜像下载](01-DownloadImage.md)
-- [02进入安装页面](02-InstallationPage.md)
-- [03进行硬盘分区](03-HardDiskPartition.md)
-- [04开始安装系统](04-SystemInstallation.md)
-- [05安装图形页面](05-GraphicalInterfacePage.md)
-- [06基础系统配置](06-SystemSittings.md)
+- [pc介绍部分](01-PC.md)
+- [01选择镜像下载](02-DownloadImage.md)
+- [02进入安装页面](03-InstallationPage.md)
+- [03进行硬盘分区](04-HardDiskPartition.md)
+- [04开始安装系统](05-SystemInstallation.md)
+- [05安装图形页面](06-GraphicalInterfacePage.md)
+- [06基础系统配置](07-SystemSittings.md)
 - [常见问题解答](faq.md)
 
 ## 从这里开始
