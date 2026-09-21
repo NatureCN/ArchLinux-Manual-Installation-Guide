@@ -6,16 +6,18 @@ nav_order: 0
 
 # ArchLinux中文手动安装教程@NatureCN
 
-本教程介绍如何使用手动安装的方法安装ArchLinux并且进行一些基础的配置。
+- 本教程介绍如何使用手动安装的方法安装ArchLinux并且进行一些基础的配置。
+- 本教程的制作是配合着我新装的一台办公轻娱乐pc的安装一同制作，也可做一个分享和参考
 
 ## 目录
 
-- [选择镜像下载](01-DownloadImage.md)
-- [进入安装页面](02-InstallationPage.md)
-- [进行硬盘分区](03-HardDiskPartition.md)
-- [开始安装系统](04-SystemInstallation.md)
-- [安装图形页面](05-GraphicalInterfacePage.md)
-- [基础系统配置](06-SystemSittings.md)
+- [pc介绍部分](00-PC.md)
+- [01选择镜像下载](01-DownloadImage.md)
+- [02进入安装页面](02-InstallationPage.md)
+- [03进行硬盘分区](03-HardDiskPartition.md)
+- [04开始安装系统](04-SystemInstallation.md)
+- [05安装图形页面](05-GraphicalInterfacePage.md)
+- [06基础系统配置](06-SystemSittings.md)
 - [常见问题解答](faq.md)
 
 ## 从这里开始
