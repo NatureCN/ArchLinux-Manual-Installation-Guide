@@ -2,7 +2,7 @@ remote_theme: just-the-docs/just-the-docs
 title: ArchLinux中文手动安装教程
 description: 适合中国宝宝体质的ArchLinux入门教程
 
-color_scheme: auto
+color_scheme: light
 
 nav_sort: case_insensitive
 search_enabled: true
