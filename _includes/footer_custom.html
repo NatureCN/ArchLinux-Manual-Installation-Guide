@@ -1,1 +1,42 @@
+{%- comment -%}
 
+{%- endcomment -%}
+
+{%- assign ordered_pages = "" | split: "" -%}
+{%- for p in site.html_pages -%}
+  {%- if p.nav_order != nil and p.layout != "home" -%}
+    {%- assign ordered_pages = ordered_pages | push: p -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign ordered_pages = ordered_pages | sort: "nav_order" -%}
+
+{%- assign idx = nil -%}
+{%- for p in ordered_pages -%}
+  {%- if p.url == page.url -%}
+    {%- assign idx = forloop.index0 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign prev = ordered_pages[idx | minus: 1] -%}
+{%- assign next = ordered_pages[idx | plus: 1] -%}
+
+{%- if prev or next -%}
+<nav class="pagination-nav">
+  <div class="pagination-nav__item">
+    {%- if prev -%}
+      <a href="{{ prev.url | relative_url }}">
+        <span class="pagination-nav__label">← 上一页</span>
+        <span class="pagination-nav__title">{{ prev.title }}</span>
+      </a>
+    {%- endif -%}
+  </div>
+  <div class="pagination-nav__item pagination-nav__item--next">
+    {%- if next -%}
+      <a href="{{ next.url | relative_url }}">
+        <span class="pagination-nav__label">下一页 →</span>
+        <span class="pagination-nav__title">{{ next.title }}</span>
+      </a>
+    {%- endif -%}
+  </div>
+</nav>
+{%- endif -%}
