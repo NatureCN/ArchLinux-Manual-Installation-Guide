@@ -1,1 +1,31 @@
+---
+---
+/* 正文加大一点，看着不累 */
+.main-content {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 900px;
+}
 
+/* 标题间距 */
+.main-content h1 { margin-top: 1em; }
+.main-content h2 { margin-top: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+
+/* 代码块浅色背景 */
+.highlighter-rouge pre { background-color: #f6f8fa; }
+
+/* 图片居中、带边框 */
+.main-content img {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* 提示框风格（你在正文里用 > 引用的段落会变好看）*/
+.main-content blockquote {
+  border-left: 4px solid #337ab7;
+  background: #f0f7ff;
+  padding: 0.5em 1em;
+}
