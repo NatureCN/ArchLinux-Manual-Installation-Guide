@@ -8,7 +8,7 @@ search.heading_level: 2
 heading_anchors: true
 
 aux_links:
-  "GitHub 仓库": "https://github.com/NatureCN/my-tutorial"
+  "访问GitHub仓库": "https://github.com/NatureCN/my-tutorial"
 
 plugins:
   - jekyll-remote-theme
