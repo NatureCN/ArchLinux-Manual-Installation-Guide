@@ -1,42 +1,49 @@
-{%- comment -%}
-
-{%- endcomment -%}
-
-{%- assign ordered_pages = "" | split: "" -%}
+{%- assign pages_list = "" | split: "" -%}
 {%- for p in site.html_pages -%}
-  {%- if p.nav_order != nil and p.layout != "home" -%}
-    {%- assign ordered_pages = ordered_pages | push: p -%}
+  {%- if p.nav_order != nil and p.layout != "home" and p.title -%}
+    {%- assign pages_list = pages_list | push: p -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign ordered_pages = ordered_pages | sort: "nav_order" -%}
+{%- assign pages_list = pages_list | sort: "nav_order" -%}
 
-{%- assign idx = nil -%}
-{%- for p in ordered_pages -%}
-  {%- if p.url == page.url -%}
+{%- assign my_url = page.url | relative_url -%}
+{%- assign idx = -1 -%}
+{%- for p in pages_list -%}
+  {%- assign u = p.url | relative_url -%}
+  {%- if u == my_url -%}
     {%- assign idx = forloop.index0 -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- assign prev = ordered_pages[idx | minus: 1] -%}
-{%- assign next = ordered_pages[idx | plus: 1] -%}
+{%- assign prev = nil -%}
+{%- assign next = nil -%}
+{%- if idx >= 0 -%}
+  {%- assign i_prev = idx | minus: 1 -%}
+  {%- assign i_next = idx | plus: 1 -%}
+  {%- if i_prev >= 0 -%}{%- assign prev = pages_list[i_prev] -%}{%- endif -%}
+  {%- if i_next < pages_list.size -%}{%- assign next = pages_list[i_next] -%}{%- endif -%}
+{%- endif -%}
 
-{%- if prev or next -%}
+{%- if prev and prev.url != page.url and next and next.url != page.url -%}
+<nav class="pagination-nav"> ... </nav>
+{%- elsif prev and prev.url != page.url -%}
 <nav class="pagination-nav">
   <div class="pagination-nav__item">
-    {%- if prev -%}
-      <a href="{{ prev.url | relative_url }}">
-        <span class="pagination-nav__label">← 上一页</span>
-        <span class="pagination-nav__title">{{ prev.title }}</span>
-      </a>
-    {%- endif -%}
+    <a href="{{ prev.url | relative_url }}">
+      <span class="pagination-nav__label">← 上一页</span>
+      <span class="pagination-nav__title">{{ prev.title }}</span>
+    </a>
   </div>
+  <div class="pagination-nav__item pagination-nav__item--next"></div>
+</nav>
+{%- elsif next and next.url != page.url -%}
+<nav class="pagination-nav">
+  <div class="pagination-nav__item"></div>
   <div class="pagination-nav__item pagination-nav__item--next">
-    {%- if next -%}
-      <a href="{{ next.url | relative_url }}">
-        <span class="pagination-nav__label">下一页 →</span>
-        <span class="pagination-nav__title">{{ next.title }}</span>
-      </a>
-    {%- endif -%}
+    <a href="{{ next.url | relative_url }}">
+      <span class="pagination-nav__label">下一页 →</span>
+      <span class="pagination-nav__title">{{ next.title }}</span>
+    </a>
   </div>
 </nav>
 {%- endif -%}
