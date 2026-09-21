@@ -18,3 +18,7 @@ plugins:
 footer_content: "© 2026 NatureCN"
 
 search_enabled: true
+
+just_the_docs:
+  css:
+    - assets/css/custom.scss
