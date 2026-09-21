@@ -156,6 +156,24 @@
   text-align: right;
 }
 
+.pagination-nav {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid #e5e7eb;
+  gap: 1em;
+}
+
+.pagination-nav__item {
+  flex: 0 0 auto;
+}
+
+.pagination-nav__item--next {
+  margin-left: auto;
+  text-align: right;
+}
+
 .pagination-nav a {
   display: inline-block;
   padding: 0.6em 1.2em;
@@ -164,6 +182,7 @@
   text-decoration: none;
   background: #fff;
   transition: border-color 0.15s, background 0.15s;
+  white-space: nowrap;
 }
 
 .pagination-nav a:hover {
@@ -180,10 +199,4 @@
 
 .pagination-nav__title {
   font-weight: 500;
-}
-
-.pagination-nav__item:empty::after {
-  content: "";
-  display: inline-block;
-  width: 120px;
 }
