@@ -10,11 +10,11 @@ parent: 使用教程
 
 1. 打开浏览器，搜索ArchLinux，或者直接访问：[ArchLinux官网链接](https://archlinux.org)
 
-# ![网站主页](images/1.png)
+    ![网站主页](images/1.png)
 
 2. 选择右上角的Downloads，进入下载页面
 3. 下拉，找到中国镜像站，选择一个，比如阿里云，进入镜像站。选择最新的iso文件，目前是2026.09.01的这个。（教程制作的时候似乎阿里云暂停了下载服务，所以下载不了，可以换一个镜像站，都是差不多的）
 
-# ![镜像选择](images/2.png)
+    ![镜像选择](images/2.png)
 
-# ![阿里镜像](images/3.png)
+    ![阿里镜像](images/3.png)
