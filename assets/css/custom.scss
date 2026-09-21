@@ -181,3 +181,9 @@
 .pagination-nav__title {
   font-weight: 500;
 }
+
+.pagination-nav__item:empty::after {
+  content: "";
+  display: inline-block;
+  width: 120px;
+}
