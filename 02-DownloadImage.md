@@ -2,7 +2,6 @@
 layout: default
 title: 选择镜像下载
 nav_order: 2
-parent: 使用教程
 ---
 
 # 我们应该从制作镜像开始，这样对吗？
