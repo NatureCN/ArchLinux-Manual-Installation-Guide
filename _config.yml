@@ -10,7 +10,7 @@ search.heading_level: 2
 heading_anchors: true
 
 aux_links:
-  "访问GitHub仓库": "https://github.com/NatureCN/my-tutorial"
+  "NatureCN/ArchLinux-Manual-Installation-Guide": "https://github.com/NatureCN/my-tutorial"
 
 plugins:
   - jekyll-remote-theme
